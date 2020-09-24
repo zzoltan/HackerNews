@@ -15,6 +15,10 @@
 		67682D81251B24E300A4D9A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67682D7F251B24E300A4D9A5 /* LaunchScreen.storyboard */; };
 		67682D8C251B24E300A4D9A5 /* HackerNewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67682D8B251B24E300A4D9A5 /* HackerNewsTests.swift */; };
 		67682D97251B24E300A4D9A5 /* HackerNewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67682D96251B24E300A4D9A5 /* HackerNewsUITests.swift */; };
+		67682DA9251BDD0100A4D9A5 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67682DA8251BDD0100A4D9A5 /* PostData.swift */; };
+		67682DB1251BDD0F00A4D9A5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67682DB0251BDD0F00A4D9A5 /* NetworkManager.swift */; };
+		67682DBA251BE73100A4D9A5 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67682DB9251BE73100A4D9A5 /* DetailView.swift */; };
+		67715F7D251BEF0A0057ADAA /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67715F7C251BEF0A0057ADAA /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,11 @@
 		67682D92251B24E300A4D9A5 /* HackerNewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackerNewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		67682D96251B24E300A4D9A5 /* HackerNewsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackerNewsUITests.swift; sourceTree = "<group>"; };
 		67682D98251B24E300A4D9A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67682DA8251BDD0100A4D9A5 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
+		67682DB0251BDD0F00A4D9A5 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		67682DB9251BE73100A4D9A5 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		67715F7C251BEF0A0057ADAA /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		67715F84251BF1340057ADAA /* HackerNews.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HackerNews.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +108,11 @@
 		67682D73251B24E200A4D9A5 /* HackerNews */ = {
 			isa = PBXGroup;
 			children = (
+				67715F84251BF1340057ADAA /* HackerNews.entitlements */,
+				67682DA7251BDCE400A4D9A5 /* Models */,
 				67682D74251B24E200A4D9A5 /* AppDelegate.swift */,
 				67682D76251B24E200A4D9A5 /* SceneDelegate.swift */,
-				67682D78251B24E200A4D9A5 /* ContentView.swift */,
+				67682DB5251BE71A00A4D9A5 /* Views */,
 				67682D7A251B24E300A4D9A5 /* Assets.xcassets */,
 				67682D7F251B24E300A4D9A5 /* LaunchScreen.storyboard */,
 				67682D82251B24E300A4D9A5 /* Info.plist */,
@@ -134,6 +145,25 @@
 				67682D98251B24E300A4D9A5 /* Info.plist */,
 			);
 			path = HackerNewsUITests;
+			sourceTree = "<group>";
+		};
+		67682DA7251BDCE400A4D9A5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				67682DA8251BDD0100A4D9A5 /* PostData.swift */,
+				67682DB0251BDD0F00A4D9A5 /* NetworkManager.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		67682DB5251BE71A00A4D9A5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				67682D78251B24E200A4D9A5 /* ContentView.swift */,
+				67682DB9251BE73100A4D9A5 /* DetailView.swift */,
+				67715F7C251BEF0A0057ADAA /* WebView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,8 +297,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				67682D75251B24E200A4D9A5 /* AppDelegate.swift in Sources */,
+				67682DBA251BE73100A4D9A5 /* DetailView.swift in Sources */,
+				67682DA9251BDD0100A4D9A5 /* PostData.swift in Sources */,
+				67682DB1251BDD0F00A4D9A5 /* NetworkManager.swift in Sources */,
 				67682D77251B24E200A4D9A5 /* SceneDelegate.swift in Sources */,
 				67682D79251B24E200A4D9A5 /* ContentView.swift in Sources */,
+				67715F7D251BEF0A0057ADAA /* WebView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +470,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HackerNews/HackerNews.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"HackerNews/Preview Content\"";
 				DEVELOPMENT_TEAM = R634NQRFKV;
@@ -447,6 +483,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zoltan.zavarko.HackerNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -457,6 +494,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HackerNews/HackerNews.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"HackerNews/Preview Content\"";
 				DEVELOPMENT_TEAM = R634NQRFKV;
@@ -468,6 +507,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zoltan.zavarko.HackerNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
